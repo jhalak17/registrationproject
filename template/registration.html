@@ -195,15 +195,31 @@
           <label for="name">Name<span>*</span></label>
           <input id="name" type="text" name="name" required/>
         </div>
+        
+          {% for message in messages %}
+            <strong style ="color :red">Message</strong> {{ message }}
+          {% endfor %}
+
+  
 
         <div class="item">
           <label for="email">Email Address<span>*</span></label>
           <input id="email" type="email" name="email" required/>
         </div>
         <div class="item">
-            <label for="password">New Passwrod<span>*</span></label>
+            <label for="password">Passwrod<span>*</span></label>
             <input id="password" type="text" name="password" required/>
           </div>
+        <div class="item">
+            <label for="c_password">Confirm Passwrod<span>*</span></label>
+            <input id="c_password" type="text" name="c_password" required/>
+          </div>
+
+          {% for message in messages %}
+            <strong>Message</strong> {{ message }}
+            </div>
+          {% endfor %}
+
         <div class="item">
           <label for="address">Address<span>*</span></label>
           <input id="address" type="address" name="address" required/>
@@ -224,11 +240,11 @@
           <label>Gender</label>
           <div class="question-answer">
             <div>
-              <input type="radio" value="none" id="radio_1" name="gender"/>
+              <input type="radio" value="Male" id="radio_1" name="gender"/>
               <label for="radio_1" class="radio"><span>Male</span></label>
             </div>
             <div>
-              <input  type="radio" value="none" id="radio_2" name="gender"/>
+              <input  type="radio" value="Female" id="radio_2" name="gender"/>
               <label for="radio_2" class="radio"><span>Female</span></label>
             </div>
           </div>

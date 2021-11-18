@@ -79,6 +79,9 @@
         <input type="text" placeholder="Enter Username" name="uname" required>
         <label for="psw"><strong>Password</strong></label>
         <input type="password" placeholder="Enter Password" name="psw" required>
+        {% for message in messages %}
+            <strong style ="color :red">Message</strong> {{ message }}
+        {% endfor %}
       </div>
       <button type="submit" class="button1">Login</button>
     </form>
